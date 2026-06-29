@@ -176,13 +176,13 @@ The model extracts several handcrafted URL features, including:
 ## Clone the repository
 
 ```bash
-git clone https://github.com/<your-github-username>/Phishing-Detection-System.git
+git clone https://github.com/Hansika2024/hybrid-url-threat-detection.git
 ```
 
 ## Navigate to the project
 
 ```bash
-cd Phishing-Detection-System
+cd hybrid-url-threat-detection
 ```
 
 ## Install dependencies
