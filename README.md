@@ -253,25 +253,25 @@ The results demonstrate that the proposed Hybrid System significantly outperform
 
 ### ✅ Benign URL Prediction
 
-![Benign Prediction](screenshots/Benign.png)
+![Benign](Hybrid-URL-Threat-Detection/screenshots/Benign.png)
 
 ---
 
 ### 🎣 Phishing URL Prediction
 
-![Phishing Prediction](screenshots/Phishing.png)
+![Phishing](Hybrid-URL-Threat-Detection/screenshots/Phishing.png)
 
 ---
 
 ### 🏴 Piracy URL Prediction
 
-![Piracy Prediction](screenshots/Piracy.png)
+![Piracy](Hybrid-URL-Threat-Detection/screenshots/Piracy.png)
 
 ---
 
 ### 🔠 Typosquatting URL Prediction
 
-![Typosquatting Prediction](screenshots/Typosquatting.png)
+![Typosquatting](Hybrid-URL-Threat-Detection/screenshots/Typosquatting.png)
 
 ---
 
