@@ -126,7 +126,7 @@ Developer
 | Local Kubernetes  | Docker Desktop Kubernetes    |
 | Kubernetes CLI    | kubectl                      |
 | Security Scanning | Trivy                        |
-| Testing           | Pytest                       |
+| Testing           | Python unittest                       |
 | API Documentation | FastAPI Swagger UI           |
 
 ---
@@ -228,7 +228,7 @@ The current test coverage focuses on basic API functionality, including the heal
 Example:
 
 ```bash
-pytest
+python -m unittest discover -s tests -v
 ```
 
 The purpose of this stage is to detect application-level problems before the image is deployed to Kubernetes.
@@ -514,9 +514,9 @@ k8s/service.yaml
 The Service maps:
 
 ```text
+Service type: ClusterIP
 Service port: 8000
 Target port: 8000
-NodePort: 30080
 ```
 
 Check the Service:
@@ -752,7 +752,7 @@ kubectl run curl-test \
   -it \
   --image=curlimages/curl \
   --restart=Never \
-  -- curl -s http://hybrid-url-threat-api-service:8000/health
+  -- curl -s http://hybrid-url-threat-api:8000/health
 ```
 
 The application returned:
