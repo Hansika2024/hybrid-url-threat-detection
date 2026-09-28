@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hybrid-url-threat-api
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: hybrid-url-threat-api
+
+  template:
+    metadata:
+      labels:
+        app: hybrid-url-threat-api
+
+    spec:
+      containers:
+        - name: hybrid-url-threat-api
+          image: hybrid-url-threat-api:ci
+          imagePullPolicy: IfNotPresent
+
+          ports:
+            - containerPort: 8000
+
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 60
+            periodSeconds: 5
+            failureThreshold: 12
+
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 90
+            periodSeconds: 10
+            failureThreshold: 6

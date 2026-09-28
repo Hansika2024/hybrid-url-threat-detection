@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hybrid-url-threat-api
+spec:
+  selector:
+    app: hybrid-url-threat-api
+  ports:
+    - port: 8000
+      targetPort: 8000
