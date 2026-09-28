@@ -3,13 +3,10 @@ pipeline {
 
     stages {
 
-        stage('Environment Check') {
+        stage('Docker Build') {
             steps {
-                sh 'python3 --version || true'
-                sh 'python --version || true'
-                sh 'git --version'
-                sh 'pwd'
-                sh 'ls -la'
+                echo 'Building Docker image'
+                sh 'docker build -t hybrid-url-threat-api:ci .'
             }
         }
 
