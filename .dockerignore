@@ -1,0 +1,11 @@
+venv/
+.venv/
+.git/
+__pycache__/
+*.py[cod]
+*.log
+.vscode/
+.env
+.env.*
+training/
+screenshots/

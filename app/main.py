@@ -107,6 +107,12 @@ def home():
         "message": "Hybrid URL Threat Detection API Running"
     }
 
+@app.get("/health")
+def health():
+    return {
+        "status": "healthy"
+    }
+
 
 # ======================================
 # PREDICTION ROUTE
